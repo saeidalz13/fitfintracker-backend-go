@@ -50,7 +50,7 @@ func main() {
 }
 
 func mustGetEnvVars() *cn.DotEnvVars {
-	if os.Getenv("DEV_STAGE") != cn.DefaultDevStages.Production {
+	if os.Getenv("STAGE") != cn.DefaultDevStages.Production {
 		if err := godotenv.Load(".env"); err != nil {
 			panic("no .env file found")
 		}
